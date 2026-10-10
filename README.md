@@ -14,7 +14,7 @@ Kernel intuition separates infra engineers from API callers.
 
 ## Status
 
-Scaffolded. Concept notes and the first implementation are in progress; results land in `results/` once the GPU runs are done.
+Concept primer written (`CONCEPTS.md`). Kernels and benchmark are next; results land in `results/` once the GPU runs are done.
 
 ## Layout
 
