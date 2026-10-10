@@ -1,0 +1,366 @@
+{
+ "peak_gbs": 320.0,
+ "gpu": "Tesla T4",
+ "rows": [
+  {
+   "op": "softmax",
+   "impl": "torch.softmax",
+   "rows": 16384,
+   "cols": 512,
+   "dtype": "float16",
+   "ms": 0.15564799308776855,
+   "gb_s": 215.57895694214923,
+   "pct_of_peak": 67.36842404442163
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.compile(unfused)",
+   "rows": 16384,
+   "cols": 512,
+   "dtype": "float16",
+   "ms": 0.14790400117635727,
+   "gb_s": 226.8662898442516,
+   "pct_of_peak": 70.89571557632863
+  },
+  {
+   "op": "softmax",
+   "impl": "triton",
+   "rows": 16384,
+   "cols": 512,
+   "dtype": "float16",
+   "ms": 0.13923199474811554,
+   "gb_s": 240.99656160714562,
+   "pct_of_peak": 75.311425502233
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "F.rms_norm",
+   "rows": 16384,
+   "cols": 512,
+   "dtype": "float16",
+   "ms": 0.2160320058465004,
+   "gb_s": 155.32631782275135,
+   "pct_of_peak": 48.539474319609795
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "torch.compile(unfused)",
+   "rows": 16384,
+   "cols": 512,
+   "dtype": "float16",
+   "ms": 0.14745600521564484,
+   "gb_s": 227.56249195092005,
+   "pct_of_peak": 71.11327873466252
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "triton",
+   "rows": 16384,
+   "cols": 512,
+   "dtype": "float16",
+   "ms": 0.1454080045223236,
+   "gb_s": 230.76759845671657,
+   "pct_of_peak": 72.11487451772393
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.softmax",
+   "rows": 4096,
+   "cols": 1024,
+   "dtype": "float16",
+   "ms": 0.08156800270080566,
+   "gb_s": 205.68379075725844,
+   "pct_of_peak": 64.27618461164326
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.compile(unfused)",
+   "rows": 4096,
+   "cols": 1024,
+   "dtype": "float16",
+   "ms": 0.07772800326347351,
+   "gb_s": 215.84519472513026,
+   "pct_of_peak": 67.4516233516032
+  },
+  {
+   "op": "softmax",
+   "impl": "triton",
+   "rows": 4096,
+   "cols": 1024,
+   "dtype": "float16",
+   "ms": 0.07577600330114365,
+   "gb_s": 221.40539575998977,
+   "pct_of_peak": 69.1891861749968
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "F.rms_norm",
+   "rows": 4096,
+   "cols": 1024,
+   "dtype": "float16",
+   "ms": 0.07379200309515,
+   "gb_s": 227.38594015891167,
+   "pct_of_peak": 71.0581062996599
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "torch.compile(unfused)",
+   "rows": 4096,
+   "cols": 1024,
+   "dtype": "float16",
+   "ms": 0.07603199779987335,
+   "gb_s": 220.68687507285188,
+   "pct_of_peak": 68.9646484602662
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "triton",
+   "rows": 4096,
+   "cols": 1024,
+   "dtype": "float16",
+   "ms": 0.07577600330114365,
+   "gb_s": 221.43242278583938,
+   "pct_of_peak": 69.19763212057481
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.softmax",
+   "rows": 4096,
+   "cols": 4096,
+   "dtype": "float16",
+   "ms": 0.37811198830604553,
+   "gb_s": 177.4840948594356,
+   "pct_of_peak": 55.46377964357363
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.compile(unfused)",
+   "rows": 4096,
+   "cols": 4096,
+   "dtype": "float16",
+   "ms": 0.3479520082473755,
+   "gb_s": 192.86816115252637,
+   "pct_of_peak": 60.27130036016449
+  },
+  {
+   "op": "softmax",
+   "impl": "triton",
+   "rows": 4096,
+   "cols": 4096,
+   "dtype": "float16",
+   "ms": 0.2796480059623718,
+   "gb_s": 239.97619353320138,
+   "pct_of_peak": 74.99256047912543
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "F.rms_norm",
+   "rows": 4096,
+   "cols": 4096,
+   "dtype": "float16",
+   "ms": 0.37513598799705505,
+   "gb_s": 178.91393560600454,
+   "pct_of_peak": 55.91060487687641
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "torch.compile(unfused)",
+   "rows": 4096,
+   "cols": 4096,
+   "dtype": "float16",
+   "ms": 0.30668801069259644,
+   "gb_s": 218.84473360542825,
+   "pct_of_peak": 68.38897925169633
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "triton",
+   "rows": 4096,
+   "cols": 4096,
+   "dtype": "float16",
+   "ms": 0.2826879918575287,
+   "gb_s": 237.42450310314626,
+   "pct_of_peak": 74.1951572197332
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.softmax",
+   "rows": 1024,
+   "cols": 8192,
+   "dtype": "float16",
+   "ms": 0.1595040038228035,
+   "gb_s": 210.36733370828958,
+   "pct_of_peak": 65.7397917838405
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.compile(unfused)",
+   "rows": 1024,
+   "cols": 8192,
+   "dtype": "float16",
+   "ms": 0.27403199672698975,
+   "gb_s": 122.44713172465522,
+   "pct_of_peak": 38.264728663954756
+  },
+  {
+   "op": "softmax",
+   "impl": "triton",
+   "rows": 1024,
+   "cols": 8192,
+   "dtype": "float16",
+   "ms": 0.14745600521564484,
+   "gb_s": 227.5555475067212,
+   "pct_of_peak": 71.11110859585037
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "F.rms_norm",
+   "rows": 1024,
+   "cols": 8192,
+   "dtype": "float16",
+   "ms": 0.2088959962129593,
+   "gb_s": 160.70588526635134,
+   "pct_of_peak": 50.22058914573479
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "torch.compile(unfused)",
+   "rows": 1024,
+   "cols": 8192,
+   "dtype": "float16",
+   "ms": 0.21913599967956543,
+   "gb_s": 153.1962619062563,
+   "pct_of_peak": 47.87383184570509
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "triton",
+   "rows": 1024,
+   "cols": 8192,
+   "dtype": "float16",
+   "ms": 0.14745600521564484,
+   "gb_s": 227.66665861390226,
+   "pct_of_peak": 71.14583081684445
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.softmax",
+   "rows": 256,
+   "cols": 32768,
+   "dtype": "float16",
+   "ms": 0.20640000700950623,
+   "gb_s": 162.56991695961798,
+   "pct_of_peak": 50.80309904988062
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.compile(unfused)",
+   "rows": 256,
+   "cols": 32768,
+   "dtype": "float16",
+   "ms": 0.31379200518131256,
+   "gb_s": 106.93208063287615,
+   "pct_of_peak": 33.4162751977738
+  },
+  {
+   "op": "softmax",
+   "impl": "triton",
+   "rows": 256,
+   "cols": 32768,
+   "dtype": "float16",
+   "ms": 0.15487999469041824,
+   "gb_s": 216.6479413114021,
+   "pct_of_peak": 67.70248165981316
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "F.rms_norm",
+   "rows": 256,
+   "cols": 32768,
+   "dtype": "float16",
+   "ms": 0.21484799683094025,
+   "gb_s": 156.48257603469725,
+   "pct_of_peak": 48.90080501084289
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "torch.compile(unfused)",
+   "rows": 256,
+   "cols": 32768,
+   "dtype": "float16",
+   "ms": 0.2221119999885559,
+   "gb_s": 151.36493301457028,
+   "pct_of_peak": 47.301541567053214
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "triton",
+   "rows": 256,
+   "cols": 32768,
+   "dtype": "float16",
+   "ms": 0.14948800206184387,
+   "gb_s": 224.9007782316287,
+   "pct_of_peak": 70.28149319738397
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.softmax",
+   "rows": 64,
+   "cols": 65536,
+   "dtype": "float16",
+   "ms": 0.13099200278520584,
+   "gb_s": 128.07816998958663,
+   "pct_of_peak": 40.02442812174582
+  },
+  {
+   "op": "softmax",
+   "impl": "torch.compile(unfused)",
+   "rows": 64,
+   "cols": 65536,
+   "dtype": "float16",
+   "ms": 0.25254398584365845,
+   "gb_s": 66.43284710959703,
+   "pct_of_peak": 20.760264721749074
+  },
+  {
+   "op": "softmax",
+   "impl": "triton",
+   "rows": 64,
+   "cols": 65536,
+   "dtype": "float16",
+   "ms": 0.12150400131940842,
+   "gb_s": 138.07953497676374,
+   "pct_of_peak": 43.14985468023867
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "F.rms_norm",
+   "rows": 64,
+   "cols": 65536,
+   "dtype": "float16",
+   "ms": 0.13849599659442902,
+   "gb_s": 122.0850307284632,
+   "pct_of_peak": 38.15157210264475
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "torch.compile(unfused)",
+   "rows": 64,
+   "cols": 65536,
+   "dtype": "float16",
+   "ms": 0.1329600065946579,
+   "gb_s": 127.16822473953869,
+   "pct_of_peak": 39.74007023110584
+  },
+  {
+   "op": "rmsnorm",
+   "impl": "triton",
+   "rows": 64,
+   "cols": 65536,
+   "dtype": "float16",
+   "ms": 0.16489599645137787,
+   "gb_s": 102.53910564157128,
+   "pct_of_peak": 32.04347051299102
+  }
+ ]
+}
