@@ -3,4 +3,4 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 docker build -q -t fusedkernels-cpu -f docker/Dockerfile docker >/dev/null
-docker run --rm -v "$PWD":/work -e TRITON_INTERPRET=1 fusedkernels-cpu python -m pytest -q "$@"
+docker run --rm -v "$PWD":/work -e TRITON_INTERPRET=1 -e PYTHONPATH=/work/src fusedkernels-cpu python -m pytest -q "$@"

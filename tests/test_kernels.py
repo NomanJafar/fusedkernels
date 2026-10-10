@@ -53,7 +53,13 @@ def test_rmsnorm_fp16_does_not_overflow_in_the_square():
     assert torch.isfinite(y).all() and torch.allclose(y.float(), torch.ones_like(y).float(), atol=1e-2)
 
 
-@pytest.mark.parametrize("block", [256, 1024, 4096])
+@pytest.mark.parametrize("block", [1024, 2048, 4096])
 def test_softmax_block_size_override_gives_same_result(block):
     x = torch.randn(4, 777, device=DEVICE)
     torch.testing.assert_close(softmax(x, block_size=block), torch.softmax(x, dim=-1))
+
+
+def test_softmax_rejects_block_smaller_than_row():
+    x = torch.randn(2, 777, device=DEVICE)
+    with pytest.raises(AssertionError, match="online variant"):
+        softmax(x, block_size=256)
