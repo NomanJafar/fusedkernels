@@ -14,7 +14,7 @@ Kernel intuition separates infra engineers from API callers.
 
 ## Status
 
-Kernels, tests and benchmark harness complete; GPU benchmark pending. Correctness is proven on CPU under Triton's interpreter (46 tests); bandwidth numbers need the T4.
+Done. Correctness is proven on CPU under Triton's interpreter (46 tests); the bandwidth numbers below were measured on a Kaggle T4 on 11 Oct 2026.
 
 ## What is in here
 
